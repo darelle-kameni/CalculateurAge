@@ -1,0 +1,14 @@
+# Build outputs
+bin/
+obj/
+
+# User-specific files
+.vs/
+*.user
+*.suo
+
+# OS-generated files
+.DS_Store
+
+# Document de consigne du TP (ne doit pas être versionné)
+TP1_CalculateurAge_Routing_MVVM.md
