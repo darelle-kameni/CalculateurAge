@@ -12,3 +12,9 @@ obj/
 
 # Document de consigne du TP (ne doit pas être versionné)
 TP1_CalculateurAge_Routing_MVVM.md
+
+# IDE
+.vs/
+.idea/
+*.user
+*.suo

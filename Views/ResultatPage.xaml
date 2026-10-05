@@ -11,6 +11,16 @@
             x:Name="lblMessage"
             FontSize="22" />
 
+        <Label
+            x:Name="lblStatut"
+            FontSize="18"
+            TextColor="DarkGreen" />
+
+        <Label
+            x:Name="lblProchain"
+            FontSize="16"
+            TextColor="DarkSlateBlue" />
+
         <Button
             Text="Retour"
             Clicked="OnRetourClicked" />

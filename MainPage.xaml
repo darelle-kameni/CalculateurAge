@@ -14,16 +14,47 @@
                 Placeholder="Votre nom" />
 
             <Label Text="Date de naissance" FontSize="16" />
-            <DatePicker Date="{Binding DateNaissance, Mode=TwoWay}" />
+            <DatePicker
+                Date="{Binding DateNaissance, Mode=TwoWay}"
+                MaximumDate="{Binding DateNaissanceMax}" />
 
-            <Button
-                Text="Calculer"
-                Command="{Binding CalculerCommand}" />
+            <HorizontalStackLayout Spacing="12">
+                <Button
+                    Text="Calculer"
+                    Command="{Binding CalculerCommand}" />
+
+                <Button
+                    Text="Effacer"
+                    Command="{Binding EffacerCommand}" />
+            </HorizontalStackLayout>
 
             <Label
                 Text="{Binding Resultat}"
                 FontSize="20"
                 IsVisible="{Binding ResultatVisible}" />
+
+            <Label
+                Text="{Binding Statut}"
+                FontSize="18"
+                TextColor="DarkGreen"
+                IsVisible="{Binding ResultatVisible}" />
+
+            <Label
+                Text="{Binding ProchainAnniversaireText}"
+                FontSize="16"
+                TextColor="DarkSlateBlue"
+                IsVisible="{Binding ResultatVisible}" />
+
+            <Label Text="Historique" FontSize="16" FontAttributes="Bold" />
+            <CollectionView ItemsSource="{Binding Historique}" HeightRequest="180">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Stroke="LightGray" Padding="8" Margin="0,2">
+                            <Label Text="{Binding .}" FontSize="16" />
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
         </VerticalStackLayout>
     </ScrollView>
